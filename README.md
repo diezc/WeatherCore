@@ -1,4 +1,4 @@
-WeatherSparkCore
+WeatherCore
 ================
 
 A simple project using multiple sensor to create a Weather Station powered by the Spark Core. The core reads temperature values from different sensors and calculates the average. 
