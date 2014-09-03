@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> - jsFiddle demo by diezc</title>
+  
+  <script type='text/javascript' src='http://code.jquery.com/jquery-git2.js'></script>
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+  <style type='text/css'>
+    
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$('#temp').click(function () {
+
+    var url = 'https://api.spark.io/v1/devices/{DEVICE ID}';
+
+
+    $.get(url, {
+        access_token: "{ACCESS TOKEN}"
+    })
+        .done(function (data) {
+        console.log(data);
+        $('#output').html(JSON.stringify(data));
+    });
+
+});
+
+$('#light').click(function () {
+
+    var url = 'https://api.spark.io/v1/devices/{DEVICE ID}/light';
+
+
+    $.get(url, {
+        access_token: "{ACCESS TOKEN}"
+    })
+        .done(function (data) {
+        console.log(data);
+        $('#output').html(JSON.stringify(data));
+    });
+
+});
+
+$('#Pressure').click(function () {
+
+    var url = 'https://api.spark.io/v1/devices/{DEVICE ID}/pressure';
+
+
+    $.get(url, {
+        access_token: "{ACCESS TOKEN}"
+    })
+        .done(function (data) {
+        console.log(data);
+        $('#output').html(JSON.stringify(data));
+    });
+
+});
+
+$('#Humidity').click(function () {
+
+    var url = 'https://api.spark.io/v1/devices/{DEVICE ID}/humidity';
+
+
+    $.get(url, {
+        access_token: "{ACCESS TOKEN}"
+    })
+        .done(function (data) {
+        console.log(data);
+        $('#output').html(JSON.stringify(data));
+    });
+
+});
+});//]]>  
+
+</script>
+
+
+</head>
+<body>
+  <button id="temp">Temperature</button>
+<br>
+<button id="light">Light</button>
+<br>
+<button id="Pressure">Pressure</button>
+<br>
+<button id="Humidity">Humidity</button>
+<br>
+<br>
+<div id="output"></div>
+  
+</body>
+
+
+</html>
+
+
