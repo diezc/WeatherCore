@@ -8,13 +8,19 @@ All of these are posted to the Spark Cloud, so they could be accessed easily.
 This is one of my very firsts Spark Core projects and usage of GitHub to post my code.
 
 Sensors used:
--TMP36: simple analog temperature sensor
--DHT11: Temperature & Humidity sensor with a One.Wire interface.
--BMP180: Barometric and Temperature sensor with a i2c interface.
--LDR: a simple light depending resistor.
+
+	-TMP36: simple analog temperature sensor
+
+	-DHT11: Temperature & Humidity sensor with a One.Wire interface.
+
+	-BMP180: Barometric and Temperature sensor with a i2c interface.
+
+	-LDR: a simple light depending resistor.
 
 The project makes use of two libraries, adapted to be used with the Spark Core:
--"ADAFRUIT_BMP085"
--"ADAFRUIT_DHT"
+
+	-"ADAFRUIT_BMP085"
+
+	-"ADAFRUIT_DHT"
 
 By @diezc
