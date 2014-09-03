@@ -1,4 +1,4 @@
-
+//Code by @diezc
 #include "Adafruit_BMP085/Adafruit_BMP085.h"
 #include "Adafruit_DHT/Adafruit_DHT.h"
 
@@ -37,6 +37,7 @@ void setup()
    Spark.variable("light", &light, INT);
    Spark.variable("humidity", &humidity, DOUBLE);
    Spark.variable("pressure", &pressure, DOUBLE);
+   Time.zone(3);
    
    pinMode(led1, OUTPUT);
    pinMode(led2, OUTPUT);
@@ -143,7 +144,7 @@ void iniBMP080(){
 /////////////////////////////////////////////////////////////////////////
 void readBMP180(){
     tbmp180=bmp.readTemperature();
-    pressure=bmp.readPressure();
+    pressure=bmp.readPressure()/100;
     
     Serial.print("Temperature = ");
     Serial.print(tbmp180);
